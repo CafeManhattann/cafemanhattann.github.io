@@ -1,7 +1,0 @@
-baseURL = "https://priisk-archive.github.io/"
-title = "Пріискъ"
-theme = "PaperMod"
-
-[params]
-  homeInfoParams = false
-  mainSections = ["posts"]
