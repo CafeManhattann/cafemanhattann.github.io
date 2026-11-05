@@ -1,2 +1,3 @@
 baseURL = "https://priisk-archive.github.io/"
 title = "Пріискъ"
+theme = "PaperMod"
