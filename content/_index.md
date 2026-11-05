@@ -1,3 +1,4 @@
 ---
 title: "Пріискъ"
+layout: "list"
 ---
