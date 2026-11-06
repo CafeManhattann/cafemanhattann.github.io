@@ -72,3 +72,23 @@ body .first-entry .entry-content {
     color: var(--primary) !important; /* Яркий цвет */
     opacity: 0.85 !important; /* Легкая прозрачность для мягкости */
 }
+/* =========================================
+   5. ЦВЕТ ОПИСАНИЯ (Золотисто-оранжевый акцент)
+   ========================================= */
+:root {
+    /* Для светлой темы: глубокий золотисто-коричневый (охра) */
+    --accent-text: #b06e2c; 
+}
+
+[data-theme="dark"] {
+    /* Для темной темы: более светлый и яркий золотисто-оранжевый */
+    --accent-text: #d8933e; 
+}
+
+/* Применяем цвет к описанию */
+body .post-entry .entry-content, 
+body .first-entry .entry-content {
+    color: var(--accent-text) !important; 
+    opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был сочным */
+    font-weight: 400 !important; /* Оставляем текст обычной толщины */
+}
