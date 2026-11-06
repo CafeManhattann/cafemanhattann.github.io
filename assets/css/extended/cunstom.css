@@ -28,6 +28,7 @@ body .first-entry .entry-footer {
     
     font-family: var(--font-family) !important;
     font-size: 0.85rem !important;
+    font-weight: 500 !important; /* НОВОЕ: Делаем дату чуть плотнее */
     color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important;
     opacity: 1 !important;
 }
