@@ -1,9 +1,11 @@
-baseURL = "https://priisk-archive.github.io"
+baseURL = "https://priisk-archive.github.io/"
 title = "Пріискъ"
 theme = "PaperMod"
 
 [params]
   homeInfoParams = false
   mainSections = ["posts"]
+  customCSS = ["css/extended/custom.css"]
+
 [params.assets]
   disableFingerprinting = true
