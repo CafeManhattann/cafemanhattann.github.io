@@ -1,27 +1,33 @@
-/* Убираем особый крупный стиль у самой первой записи в ленте */
+/* ЖЕСТКО УБИРАЕМ ОСОБЫЙ СТИЛЬ У ПЕРВОЙ ЗАПИСИ */
 .first-entry {
-    min-height: auto;
-    margin: 0 0 1rem 0;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-}
-.first-entry .entry-header h1 {
-    font-size: 1.3rem; 
-}
-.first-entry .entry-content {
-    font-size: 1rem; 
-    margin: 0;
-}
-.first-entry .entry-footer {
-    font-size: 0.8rem; 
-    margin: 0;
+    min-height: auto !important;
+    margin-bottom: 1rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
 }
 
-/* Стиль для карточек с рамкой (для всех записей) */
-.post-entry {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
+/* ЗАСТАВЛЯЕМ ЗАГОЛОВОК БЫТЬ МАЛЕНЬКИМ */
+.first-entry .entry-header h1 {
+    font-size: 1.3rem !important; 
+    margin-bottom: 0.5rem !important;
+}
+
+/* ВЫРАВНИВАЕМ ТЕКСТ И ДАТУ У ПЕРВОЙ ЗАПИСИ */
+.first-entry .entry-content {
+    font-size: 1rem !important; 
+    margin: 0 0 0.5rem 0 !important;
+}
+
+.first-entry .entry-footer {
+    font-size: 0.8rem !important; 
+    margin: 0 !important;
+}
+
+/* ДЕЛАЕМ КАРТОЧКИ В РАМКАХ ДЛЯ ВСЕХ ЗАПИСЕЙ (включая первую) */
+.first-entry, .post-entry {
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
 }
