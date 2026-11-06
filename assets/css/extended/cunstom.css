@@ -32,3 +32,10 @@ body .post-entry {
     margin-bottom: 1rem !important;
     padding: 1.5rem !important;
 }
+/* Стиль для даты публикации (моноширинный шрифт) */
+.entry-footer {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px; /* Немного разряжаем буквы для красоты */
+    opacity: 0.8; /* Делаем дату чуть приглушенной, чтобы не спорила с заголовком */
+}
