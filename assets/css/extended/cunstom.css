@@ -1,96 +1,73 @@
-/* ПЛАН В: ЖЕСТКОЕ ПОДАВЛЕНИЕ СТИЛЕЙ ПЕРВОЙ ЗАПИСИ */
-body .first-entry {
-    min-height: auto !important;
-    margin-bottom: 1rem !important;
-    padding: 1.5rem !important; /* Делаем отступ как у карточек */
-    background: transparent !important;
-    border: 1px solid var(--border) !important; /* Рамка */
-    border-radius: 8px !important;
-}
-
-/* Убиваем гигантский шрифт заголовка первой записи */
-body .first-entry .entry-header h1 {
-    font-size: 1.3rem !important; 
-    margin-bottom: 0.5rem !important;
-}
-
-/* Выравниваем текст и дату */
-body .first-entry .entry-content {
-    font-size: 1rem !important; 
-    margin: 0 0 0.5rem 0 !important;
-}
-
-body .first-entry .entry-footer {
-    font-size: 0.8rem !important; 
-    margin: 0 !important;
-}
-
-/* Для остальных записей (на всякий случай) */
-body .post-entry {
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    margin-bottom: 1rem !important;
-    padding: 1.5rem !important;
-}
-/* Стиль для даты публикации (моноширинный шрифт) */
-.entry-footer {
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 0.5px; /* Немного разряжаем буквы для красоты */
-    opacity: 0.8; /* Делаем дату чуть приглушенной, чтобы не спорила с заголовком */
-}
-/* Моноширинный шрифт и промежуточный цвет для даты */
-.post-entry .entry-footer,
-.first-entry .entry-footer {
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 1px !important;
-    /* Делаем цвет промежуточным: смешиваем цвет текста и серый */
-    color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important; 
-    opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был ровным */
-}
-/* Моноширинный шрифт и промежуточный цвет для даты */
-.post-entry .entry-footer,
-.first-entry .entry-footer {
-    font-family: "Courier New", Courier, monospace !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 1px !important;
-    /* Делаем цвет промежуточным: смешиваем цвет текста и серый */
-    color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important; 
-    opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был ровным */
-}
-/* Увеличиваем контраст: карточки светлые, фон чуть темнее */
+/* =========================================
+   1. ЦВЕТА И КОНТРАСТ
+   ========================================= */
 :root {
-    /* Карточка остается почти белой (как чистый лист) */
+    /* Карточка почти белая, фон сайта чуть темнее */
     --entry: #ffffff; 
-    
-    /* А фон сайта делаем чуть темнее (легкий серый оттенок) */
     --theme: #f4f4f4; 
 }
 
 [data-theme="dark"] {
-    /* В темной теме карточка чуть светлее фона */
+    /* Карточка чуть светлее, фон почти черный */
     --entry: #1e1e1e; 
-    
-    /* А фон сайта — почти черный */
     --theme: #121212; 
 }
-/* Делаем карточку относительной, чтобы дата могла позиционироваться внутри неё */
-.post-entry, .first-entry {
-    position: relative !important;
-    padding-top: 2.5rem !important; /* Оставляем место вверху для даты */
+
+/* =========================================
+   2. КАРТОЧКИ ПУБЛИКАЦИЙ (рамки, фон)
+   ========================================= */
+body .post-entry, body .first-entry {
+    position: relative !important; /* Чтобы дата могла позиционироваться */
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+    padding: 1.5rem !important;
+    padding-top: 3.5rem !important; /* Оставляем место вверху для даты */
+    background: var(--entry) !important; /* Убираем прозрачность */
 }
 
-/* Перемещаем дату в левый верхний угол */
-.post-entry .entry-footer, .first-entry .entry-footer {
+/* =========================================
+   3. ДАТА (Моноширинный шрифт, левый верхний угол)
+   ========================================= */
+body .post-entry .entry-footer, 
+body .first-entry .entry-footer {
     position: absolute !important;
-    top: 1rem !important; /* Отступ сверху */
-    left: 1.5rem !important; /* Отступ слева (как у текста) */
+    top: 1.2rem !important; /* Отступ сверху */
+    left: 1.5rem !important; /* Отступ слева */
     margin: 0 !important;
     padding: 0 !important;
+    
+    /* Шрифт и цвет */
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important;
+    opacity: 1 !important;
 }
 
-/* Убираем лишние отступы у заголовка, чтобы он прижался к дате */
-.post-entry .entry-header, .first-entry .entry-header {
-    margin-top: 0 !important;
+/* =========================================
+   4. ЗАГОЛОВКИ (Опускаем ниже даты)
+   ========================================= */
+body .post-entry .entry-header, 
+body .first-entry .entry-header {
+    margin-top: 0 !important; 
+    margin-bottom: 0.5rem !important;
+}
+
+/* Уравниваем размер заголовков у первой и остальных записей */
+body .post-entry .entry-header h2, 
+body .first-entry .entry-header h1 {
+    font-size: 1.3rem !important; 
+    margin: 0 !important;
+}
+
+/* =========================================
+   5. ТЕКСТ ОПИСАНИЯ (чтобы не был слишком крупным)
+   ========================================= */
+body .post-entry .entry-content, 
+body .first-entry .entry-content {
+    font-size: 1rem !important; 
+    margin: 0 !important;
 }
