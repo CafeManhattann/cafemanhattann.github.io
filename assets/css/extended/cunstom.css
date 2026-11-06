@@ -59,13 +59,38 @@ body .post-entry {
     color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important; 
     opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был ровным */
 }
-/* Немного увеличиваем контраст фона карточек */
+/* Увеличиваем контраст: карточки светлые, фон чуть темнее */
 :root {
-    /* Для светлой темы: делаем карточку чуть темнее (на пару тонов) */
-    --entry: #f2f2f2; 
+    /* Карточка остается почти белой (как чистый лист) */
+    --entry: #ffffff; 
+    
+    /* А фон сайта делаем чуть темнее (легкий серый оттенок) */
+    --theme: #f4f4f4; 
 }
 
 [data-theme="dark"] {
-    /* Для темной темы: делаем карточку чуть светлее (на пару тонов) */
+    /* В темной теме карточка чуть светлее фона */
     --entry: #1e1e1e; 
+    
+    /* А фон сайта — почти черный */
+    --theme: #121212; 
+}
+/* Делаем карточку относительной, чтобы дата могла позиционироваться внутри неё */
+.post-entry, .first-entry {
+    position: relative !important;
+    padding-top: 2.5rem !important; /* Оставляем место вверху для даты */
+}
+
+/* Перемещаем дату в левый верхний угол */
+.post-entry .entry-footer, .first-entry .entry-footer {
+    position: absolute !important;
+    top: 1rem !important; /* Отступ сверху */
+    left: 1.5rem !important; /* Отступ слева (как у текста) */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Убираем лишние отступы у заголовка, чтобы он прижался к дате */
+.post-entry .entry-header, .first-entry .entry-header {
+    margin-top: 0 !important;
 }
