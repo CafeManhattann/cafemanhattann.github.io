@@ -1,27 +1,34 @@
-/* Убираем особый крупный стиль у самой первой записи в ленте */
-.first-entry {
-    min-height: auto;
-    margin: 0 0 1rem 0;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-}
-.first-entry .entry-header h1 {
-    font-size: 1.3rem; 
-}
-.first-entry .entry-content {
-    font-size: 1rem; 
-    margin: 0;
-}
-.first-entry .entry-footer {
-    font-size: 0.8rem; 
-    margin: 0;
+/* ПЛАН В: ЖЕСТКОЕ ПОДАВЛЕНИЕ СТИЛЕЙ ПЕРВОЙ ЗАПИСИ */
+body .first-entry {
+    min-height: auto !important;
+    margin-bottom: 1rem !important;
+    padding: 1.5rem !important; /* Делаем отступ как у карточек */
+    background: transparent !important;
+    border: 1px solid var(--border) !important; /* Рамка */
+    border-radius: 8px !important;
 }
 
-/* Стиль для карточек с рамкой (для всех записей) */
-.post-entry {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
+/* Убиваем гигантский шрифт заголовка первой записи */
+body .first-entry .entry-header h1 {
+    font-size: 1.3rem !important; 
+    margin-bottom: 0.5rem !important;
+}
+
+/* Выравниваем текст и дату */
+body .first-entry .entry-content {
+    font-size: 1rem !important; 
+    margin: 0 0 0.5rem 0 !important;
+}
+
+body .first-entry .entry-footer {
+    font-size: 0.8rem !important; 
+    margin: 0 !important;
+}
+
+/* Для остальных записей (на всякий случай) */
+body .post-entry {
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+    padding: 1.5rem !important;
 }
