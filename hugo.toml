@@ -15,3 +15,7 @@ defaultContentLanguage = "ru"
   disableFingerprinting = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+[[menu.main]]
+  name = "Поиск"
+  url = "/search/"
+  weight = 10
