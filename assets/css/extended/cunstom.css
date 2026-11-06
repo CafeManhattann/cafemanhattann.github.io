@@ -93,3 +93,42 @@ body .first-entry .entry-content {
     opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был сочным */
     font-weight: 400 !important; /* Оставляем текст обычной толщины */
 }
+/* =========================================
+   6. СТРАНИЦА ПУБЛИКАЦИИ (Шапка в стиле карточки)
+   ========================================= */
+/* Делаем контейнер шапки относительным для позиционирования даты */
+.post-header {
+    position: relative !important;
+    padding-top: 3rem !important; /* Оставляем место для даты сверху */
+    margin-bottom: 2rem !important;
+    border-bottom: 1px solid var(--border) !important; /* Линия, отделяющая шапку от текста */
+    padding-bottom: 1.5rem !important;
+}
+
+/* Перемещаем дату наверх */
+.post-header .post-meta {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    font-family: var(--font-family) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important; /* Чуть пожирнее */
+    color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important;
+}
+
+/* Заголовок внутри публикации (оставляем аккуратным) */
+.post-header .post-title {
+    font-weight: 600 !important; 
+    margin-top: 0.5rem !important; 
+    margin-bottom: 1rem !important;
+}
+
+/* Краткое описание под заголовком в акцентном цвете */
+.post-header .post-description {
+    font-family: var(--font-family) !important;
+    font-size: 1.05rem !important; /* Чуть крупнее для читаемости */
+    line-height: 1.5 !important;
+    color: var(--accent-text) !important; /* Наш золотисто-коричневый цвет */
+    margin-top: 0.5rem !important;
+}
