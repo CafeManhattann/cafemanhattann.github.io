@@ -1,41 +1,22 @@
 /* =========================================
-   1. ЦВЕТА И КОНТРАСТ (Заводские оттенки, но чуть контрастнее)
-   ========================================= */
-:root {
-    /* В светлой теме делаем фон чуть темнее заводского */
-    --theme: #f0f0f0; 
-    /* Карточка остается белой (или почти белой) */
-    --entry: #ffffff; 
-    /* Рамка для четкости */
-    --border: #e0e0e0; 
-}
-
-[data-theme="dark"] {
-    /* В темной теме делаем карточку чуть светлее заводской */
-    --entry: #2a2a2a; 
-    /* А фон оставляем очень темным */
-    --theme: #121212; 
-    /* Рамка для четкости */
-    --border: #3a3a3a; 
-}
-
-/* =========================================
-   2. КАРТОЧКИ ПУБЛИКАЦИЙ (рамки, фон)
+   1. КАРТОЧКИ ПУБЛИКАЦИЙ (рамки, фон, отступы)
    ========================================= */
 body .post-entry, body .first-entry {
-    position: relative !important; /* Чтобы дата могла позиционироваться */
+    position: relative !important; 
     display: flex !important;
     flex-direction: column !important;
+    /* Рамка берется из заводских настроек темы */
     border: 1px solid var(--border) !important;
     border-radius: 8px !important;
     margin-bottom: 1rem !important;
     padding: 1.5rem !important;
     padding-top: 3.5rem !important; /* Место вверху для даты */
+    /* Фон карточки берется из заводских настроек (--entry) */
     background: var(--entry) !important; 
 }
 
 /* =========================================
-   3. ДАТА (Системный шрифт, левый верхний угол)
+   2. ДАТА (Системный шрифт, левый верхний угол)
    ========================================= */
 body .post-entry .entry-footer, 
 body .first-entry .entry-footer {
@@ -45,7 +26,6 @@ body .first-entry .entry-footer {
     margin: 0 !important;
     padding: 0 !important;
     
-    /* Возвращаем системный шрифт */
     font-family: var(--font-family) !important;
     font-size: 0.85rem !important;
     color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important;
@@ -53,19 +33,20 @@ body .first-entry .entry-footer {
 }
 
 /* =========================================
-   4. ЗАГОЛОВКИ И НАЗВАНИЕ САЙТА (Меньше жирности)
+   3. ЗАГОЛОВКИ (В ленте и на странице публикации)
    ========================================= */
+/* Отступы для заголовков в ленте */
 body .post-entry .entry-header, 
 body .first-entry .entry-header {
     margin-top: 0 !important; 
     margin-bottom: 0.5rem !important;
 }
 
-/* Делаем заголовки чуть тоньше (полужирный) */
+/* Делаем заголовки чуть тоньше (полужирный) в ленте */
 body .post-entry .entry-header h2, 
 body .first-entry .entry-header h1 {
     font-size: 1.3rem !important; 
-    font-weight: 600 !important; /* Убираем излишнюю жирность */
+    font-weight: 600 !important; 
     margin: 0 !important;
 }
 
@@ -74,14 +55,20 @@ body .first-entry .entry-header h1 {
     font-weight: 600 !important; 
 }
 
+/* Заголовок ВНУТРИ самой публикации (когда открываешь пост) */
+.post-header .post-title {
+    font-weight: 600 !important; 
+}
+
 /* =========================================
-   5. ТЕКСТ ОПИСАНИЯ (Системный шрифт)
+   4. ТЕКСТ ОПИСАНИЯ (Системный шрифт, чуть ярче)
    ========================================= */
 body .post-entry .entry-content, 
 body .first-entry .entry-content {
-    font-family: var(--font-family) !important; /* Возвращаем системный шрифт */
+    font-family: var(--font-family) !important; 
     font-size: 0.95rem !important; 
     line-height: 1.6 !important; 
     margin-top: 0.5rem !important; 
-    color: var(--secondary) !important; 
+    color: var(--primary) !important; /* Яркий цвет */
+    opacity: 0.85 !important; /* Легкая прозрачность для мягкости */
 }
