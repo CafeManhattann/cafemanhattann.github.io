@@ -5,6 +5,7 @@ theme = "PaperMod"
 [params]
   homeInfoParams = false
   mainSections = ["posts"]
+  disableSpecial1stPost = true
 
 [params.assets]
   disableFingerprinting = true
