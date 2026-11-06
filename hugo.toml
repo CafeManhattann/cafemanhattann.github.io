@@ -8,6 +8,8 @@ defaultContentLanguage = "ru"
   mainSections = ["posts"]
   disableSpecial1stPost = true
   dateFormat = "2 января 2006 г."
+  [markup.goldmark.renderer]
+  unsafe = true
 
 [params.assets]
   disableFingerprinting = true
