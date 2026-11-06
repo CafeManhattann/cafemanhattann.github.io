@@ -132,3 +132,92 @@ body .first-entry .entry-content {
     color: var(--accent-text) !important; /* Наш золотисто-коричневый цвет */
     margin-top: 0.5rem !important;
 }
+/* =========================================
+   6. СТРАНИЦА ПУБЛИКАЦИИ (Шапка в стиле карточки)
+   ========================================= */
+/* Делаем контейнер шапки относительным для позиционирования даты */
+.post-header {
+    position: relative !important;
+    padding-top: 2.5rem !important; /* Чуть уменьшили место сверху, чтобы дата не висела в воздухе */
+    margin-bottom: 2rem !important;
+    border-bottom: 1px solid var(--border) !important; 
+    padding-bottom: 1.5rem !important;
+}
+
+/* Перемещаем дату наверх */
+.post-header .post-meta {
+    position: absolute !important;
+    top: 0.5rem !important; /* Опустили дату чуть ниже верхнего края */
+    left: 0 !important;
+    margin: 0 !important;
+    font-family: var(--font-family) !important;
+    font-size: 1rem !important; /* Сделали дату КРУПНЕЕ (было 0.9rem) */
+    font-weight: 600 !important; /* Сделали её более плотной, чтобы не терялась */
+    color: color-mix(in srgb, var(--primary) 70%, var(--secondary)) !important; /* Чуть темнее, для лучшей читаемости */
+}
+
+/* Заголовок внутри публикации */
+.post-header .post-title {
+    font-weight: 600 !important; 
+    margin-top: 0.8rem !important; /* Чуть больше отступа от даты до заголовка */
+    margin-bottom: 1rem !important;
+}
+
+/* Краткое описание под заголовком в акцентном цвете */
+.post-header .post-description {
+    font-family: var(--font-family) !important;
+    font-size: 1.05rem !important; 
+    line-height: 1.5 !important;
+    color: var(--accent-text) !important; 
+    margin-top: 0.5rem !important;
+}
+/* =========================================
+   7. БЛОКИ ДЛЯ ТЕКСТА ПУБЛИКАЦИИ
+   ========================================= */
+
+/* 1. Блок для шифра, фонда и выходных данных (Моноширинный) */
+.doc-meta {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    color: var(--secondary) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* 2. Блок для сносок и "двух столбиков" (номер слева, текст справа) */
+.doc-footnotes {
+    font-family: var(--font-family) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin: 1.5rem 0 !important;
+    padding-left: 2rem !important; /* Отступ для номера */
+    text-indent: -2rem !important; /* Вытаскиваем номер влево */
+}
+.doc-footnotes span {
+    font-family: "Courier New", Courier, monospace !important; /* Номер моноширинный */
+    margin-right: 0.5rem !important;
+}
+
+/* 3. Блок для сведений о публикации (в конце) */
+.doc-notes {
+    font-family: var(--font-family) !important;
+    font-size: 0.9rem !important;
+    color: var(--secondary) !important;
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px dashed var(--border) !important; /* Пунктирная линия */
+}
+
+/* 4. Просто красивая сплошная линия-разделитель */
+.line-solid {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+/* 5. Пунктирная линия-разделитель */
+.line-dashed {
+    border: 0;
+    border-top: 1px dashed var(--border);
+    margin: 2rem 0;
+}
