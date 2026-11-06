@@ -13,3 +13,5 @@ defaultContentLanguage = "ru"
 
 [params.assets]
   disableFingerprinting = true
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
