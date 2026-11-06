@@ -221,3 +221,54 @@ body .first-entry .entry-content {
     border-top: 1px dashed var(--border);
     margin: 2rem 0;
 }
+/* =========================================
+   7. БЛОКИ ДЛЯ ТЕКСТА ПУБЛИКАЦИИ
+   ========================================= */
+
+/* 1. Блок для шифра, фонда (Моноширинный) */
+.doc-meta {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    color: var(--secondary) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* 2. Блок для сносок (Обычный шрифт, мелкий) */
+.doc-footnotes {
+    font-family: var(--font-family) !important;
+    font-size: 0.85rem !important; /* Сделали чуть меньше */
+    line-height: 1.5 !important;
+    margin: 1.5rem 0 !important;
+    padding-left: 1.5rem !important; 
+    text-indent: -1.5rem !important; 
+}
+.doc-footnotes span {
+    font-family: var(--font-family) !important; /* Убрали моноширинный, чтобы не путать с шифром */
+    font-weight: 600 !important; /* Цифры сделали чуть жирнее для читаемости */
+    margin-right: 0.5rem !important;
+}
+
+/* 3. Блок для завершающих сведений (Моноширинный, как выходные данные) */
+.doc-notes {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.8rem !important; /* Мелкий, как сноска в архиве */
+    line-height: 1.5 !important;
+    color: var(--secondary) !important;
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px dashed var(--border) !important; 
+}
+
+/* 4. ЕДИНЫЕ ЛИНИИ (Тонкие, одинаковые) */
+.line-solid {
+    border: 0 !important;
+    border-top: 1px solid var(--border) !important; /* Тонкая сплошная */
+    margin: 1.5rem 0 !important;
+}
+
+.line-dashed {
+    border: 0 !important;
+    border-top: 1px solid var(--border) !important; /* Сделали тоже сплошной и тонкой, чтобы не было разнобоя */
+    margin: 1.5rem 0 !important;
+}
