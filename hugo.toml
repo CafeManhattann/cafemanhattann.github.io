@@ -9,3 +9,4 @@ theme = "PaperMod"
 
 [params.assets]
   disableFingerprinting = true
+
