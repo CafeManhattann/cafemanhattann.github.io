@@ -3,14 +3,14 @@
    ========================================= */
 :root {
     /* Карточка почти белая, фон сайта чуть темнее */
-    --entry: #ffffff; 
-    --theme: #f4f4f4; 
+    --entry: #f5f5f5; 
+    --theme: #e4e4e4; 
 }
 
 [data-theme="dark"] {
     /* Карточка чуть светлее, фон почти черный */
-    --entry: #1e1e1e; 
-    --theme: #121212; 
+    --entry: #35373d; 
+    --theme: #1e1d1d; 
 }
 
 /* =========================================
@@ -24,31 +24,30 @@ body .post-entry, body .first-entry {
     border-radius: 8px !important;
     margin-bottom: 1rem !important;
     padding: 1.5rem !important;
-    padding-top: 3.5rem !important; /* Оставляем место вверху для даты */
-    background: var(--entry) !important; /* Убираем прозрачность */
+    padding-top: 3.5rem !important; /* Место вверху для даты */
+    background: var(--entry) !important; 
 }
 
 /* =========================================
-   3. ДАТА (Моноширинный шрифт, левый верхний угол)
+   3. ДАТА (Системный шрифт, левый верхний угол)
    ========================================= */
 body .post-entry .entry-footer, 
 body .first-entry .entry-footer {
     position: absolute !important;
-    top: 1.2rem !important; /* Отступ сверху */
-    left: 1.5rem !important; /* Отступ слева */
+    top: 1.2rem !important; 
+    left: 1.5rem !important; 
     margin: 0 !important;
     padding: 0 !important;
     
-    /* Шрифт и цвет */
-    font-family: "Courier New", Courier, monospace !important;
+    /* Возвращаем системный шрифт */
+    font-family: var(--font-family) !important;
     font-size: 0.85rem !important;
-    letter-spacing: 1px !important;
     color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important;
     opacity: 1 !important;
 }
 
 /* =========================================
-   4. ЗАГОЛОВКИ (Опускаем ниже даты)
+   4. ЗАГОЛОВКИ И НАЗВАНИЕ САЙТА (Меньше жирности)
    ========================================= */
 body .post-entry .entry-header, 
 body .first-entry .entry-header {
@@ -56,21 +55,27 @@ body .first-entry .entry-header {
     margin-bottom: 0.5rem !important;
 }
 
-/* Уравниваем размер заголовков у первой и остальных записей */
+/* Делаем заголовки чуть тоньше (полужирный) */
 body .post-entry .entry-header h2, 
 body .first-entry .entry-header h1 {
     font-size: 1.3rem !important; 
+    font-weight: 600 !important; /* Убираем излишнюю жирность */
     margin: 0 !important;
 }
 
+/* Название сайта "Пріискъ" тоже делаем чуть тоньше */
+.logo a {
+    font-weight: 600 !important; 
+}
+
 /* =========================================
-   5. ТЕКСТ ОПИСАНИЯ (Моноширинный шрифт)
+   5. ТЕКСТ ОПИСАНИЯ (Системный шрифт)
    ========================================= */
 body .post-entry .entry-content, 
 body .first-entry .entry-content {
-    font-family: "Courier New", Courier, monospace !important; /* Делаем шрифт печатной машинки */
-    font-size: 0.9rem !important; /* Чуть уменьшаем размер, чтобы не перегружать карточку */
-    line-height: 1.6 !important; /* Увеличиваем межстрочный интервал для удобства чтения */
-    margin-top: 0.5rem !important; /* Небольшой отступ от заголовка */
-    color: var(--secondary) !important; /* Делаем текст чуть приглушенным (серым), чтобы он не спорил с заголовком */
+    font-family: var(--font-family) !important; /* Возвращаем системный шрифт */
+    font-size: 0.95rem !important; 
+    line-height: 1.6 !important; 
+    margin-top: 0.5rem !important; 
+    color: var(--secondary) !important; 
 }
