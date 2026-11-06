@@ -49,3 +49,13 @@ body .post-entry {
     color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important; 
     opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был ровным */
 }
+/* Моноширинный шрифт и промежуточный цвет для даты */
+.post-entry .entry-footer,
+.first-entry .entry-footer {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    /* Делаем цвет промежуточным: смешиваем цвет текста и серый */
+    color: color-mix(in srgb, var(--primary) 60%, var(--secondary)) !important; 
+    opacity: 1 !important; /* Убираем прозрачность, чтобы цвет был ровным */
+}
