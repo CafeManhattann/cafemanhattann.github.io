@@ -39,3 +39,11 @@ body .post-entry {
     letter-spacing: 0.5px; /* Немного разряжаем буквы для красоты */
     opacity: 0.8; /* Делаем дату чуть приглушенной, чтобы не спорила с заголовком */
 }
+/* Моноширинный шрифт для даты в карточках */
+.post-entry .entry-footer,
+.first-entry .entry-footer {
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    color: var(--secondary) !important; /* Делаем дату чуть бледнее, чтобы не спорила с заголовком */
+}
